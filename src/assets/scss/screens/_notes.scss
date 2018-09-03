@@ -1,0 +1,210 @@
+.notes_sidebar {
+    position: fixed;
+    top: 6.5rem; left: 7rem;
+    width: 20rem;
+    margin: 0;
+    padding: 0;
+    border-right: 1px solid $dark;
+    z-index: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    .wrap {
+        padding: 2rem 10px;
+
+        .newNote {
+            .form_wrap {
+                padding: 0;
+
+                .form_input {
+
+                    button {
+                        position: absolute;
+                        top: 50%; right: 0;
+                        @include translateY(-50%);
+                        z-index: 2;
+                        background: none;
+                        border: none;
+                        cursor: pointer;
+
+                        &:disabled {
+                            opacity: .6;
+                            pointer-events: none;
+                        }
+
+                        i {
+                            font-size: 1.5rem;
+                            line-height: normal;
+                            color: $black;
+                            @include transition(all .4s ease-in-out);
+                        }
+
+                        &:hover {
+                            i {
+                                color: $lightBlue;
+                                @include transition(all .4s ease-in-out);
+                            }
+                        }
+
+                    }
+                    
+                    input { 
+                        padding: .6rem 3rem .6rem .3rem;
+                    }
+                }
+            }
+        }
+
+        nav, nav ul, nav ul li {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            ul {
+                li {
+                    display: block;
+                    width: 100%;
+                    list-style-type: none;
+                    margin: 0 auto;
+
+                    .item_wrap {
+                        position: relative;
+                        font-size: 1.5rem;
+                        line-height: normal;
+                        font-weight: 400;
+                        color: $black;
+                        display: block;
+                        width: 100%;
+                        padding: .5rem 0;
+                        cursor: pointer;
+
+                        .hash, .title {
+                            position: relative;
+                            z-index: 1;
+                        }
+
+                        &.active {
+                            background: $dark;
+                            color: $white;
+
+                            &::after {
+                                content: '';
+                                width: 200%;
+                                height: 100%;
+                                position: absolute;
+                                top: 0; left: 50%;
+                                -webkit-transform: translateX(-50%);
+                                -moz-transform: translateX(-50%);
+                                transform: translateX(-50%); 
+                                background: $dark;
+                            }
+                        }
+
+                    }
+
+                }
+            }
+        }
+
+    }
+
+}
+
+.notes_wrap {
+    padding: 2rem 0 0 27.0rem;
+
+    .empty {
+        display: block;
+        width: 100%;
+
+        p {
+            display: block;
+            width: 100%;
+            text-align: center;
+            color: $white;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: #1e1e1e;
+            position: absolute;
+            top: 0;
+            z-index: -1;
+            opacity: .8;
+            
+        }
+
+    }
+
+    .editor_wrap {
+
+        .toolbar {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+
+            h1 {
+                font-size: 3.5rem;
+                line-height: 1;
+                display: block;
+                width: 100%;
+                padding-right: 10rem;
+            }
+            .actions {
+                position: absolute;
+                top: 0; right: 0;
+                z-index: 1;
+
+                span {
+                    display: inline-block;
+
+                    button {
+                        display: inline-block;
+                        background: none;
+                        border: none;
+
+                        &.saveButton {
+                                pointer-events: none;
+                                opacity: .5;
+                            
+                            &.alert {
+                                pointer-events: all;
+                                opacity: 1;
+
+                                i {
+                                    color: $red;
+                                }
+
+                            }
+
+                        }
+
+                        i {
+                            font-size: 2.0rem;
+                            line-height: 1;
+                            color: $dark;
+                            cursor: pointer;
+                            @include transition(all .4s ease-in-out);
+                        }
+
+                        &:hover i {
+                            color: $mediumSeaGreen;
+                            @include transition(all .4s ease-in-out);
+                        }
+
+                    }
+                }
+            }
+        }
+    
+        
+    }
+    
+
+
+
+}

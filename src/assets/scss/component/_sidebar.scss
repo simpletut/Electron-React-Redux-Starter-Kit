@@ -1,0 +1,42 @@
+.sidebar {
+    position: fixed;
+    top: 6.5rem;
+    left: 0;
+    width: 7rem;
+    margin: 0;
+    padding: 0;
+    background: #1c2127;
+    z-index: 1;
+
+    nav, nav ul, nav ul li {
+        margin: 0;
+        padding: 0;
+    }
+
+    nav {
+        ul {
+            li {
+                display: block;
+                width: 100%;
+                list-style-type: none;
+
+                a {
+                    display: block;
+                    width: 100%;
+                    padding: 2rem 0;
+                    font-size: 2.5rem;
+                    line-height: normal;
+                    color: $white;
+                    text-align: center;
+
+                    &.active {
+                        background: #272F37;
+                    }
+
+                }
+
+            }
+        }
+    }
+
+}

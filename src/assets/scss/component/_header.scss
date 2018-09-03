@@ -1,0 +1,25 @@
+header {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    background: $dark;
+
+    .wrap {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        padding: 1.5rem 10px;
+
+        .logo {
+            width: 3.5rem;
+            height: auto;
+
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+
+    }
+}
