@@ -23,6 +23,14 @@ Rather than shipping a blank template, I have created a 'Notes' application to p
 
 In addition, this app is pre-configured to handle scss, images and run Windows/Mac builds out the box.
 
+### Download packaged app
+
+Download and install Simple Notes!
+
+[Mac](http://git-assets.react-starter-kit.com/electron-react-redux/Simple%20Notes-1.0.0-mac.zip)
+
+[Windows](http://git-assets.react-starter-kit.com/electron-react-redux/Simple%20Notes-1.0.0-win.zip)
+
 ### Screenshot
 
 <p align="center">
